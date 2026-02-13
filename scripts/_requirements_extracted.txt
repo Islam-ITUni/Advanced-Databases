@@ -1,0 +1,154 @@
+PAGES: 3
+
+
+===== PAGE 1 =====
+Final project 
+ Course: Advanced Databases (NoSQL) 
+1. General Description: 
+The final project is a mandatory summative assessment for the course Advanced Databases (NoSQL).  
+ 
+2. Project Format 
+ Project type: Web application only (telegram bots, mobile/desktop application, games, backend 
+only are not allowed) 
+ Team size: 1-2 students 
+ Implementation: Backend + Frontend (both required) 
+ Databases: MongoDB (NoSQL) 
+ Defense: Mandatory 
+ Maximum score: 100 points  
+ 
+3. Project Objective 
+The objective of this project is to evaluate students’ ability to: 
+ design advanced NoSQL data models 
+ implement MongoDB queries and aggregations 
+ develop backend logic around MongoDB 
+ document database structures, APIs, and design decisions 
+ 
+4. Project Requirements 
+The backend must be: 
+ Expose a RESTful API, 
+ Use MongoDB as the primary database, 
+ Implement meaningful business logic. 
+ 
+Minimum API Requirements: 
+ 1 student: at least 8 REST API endpoints 
+ 2 students: at least 12 REST API endpoints 
+ 
+Endpoints must include: 
+ Full CRUD functionality, 
+ At least one aggregation-based endpoint, 
+ Advanced update and delete operations. 
+ 
+The Database Requirements: 
+ CRUD operations across multiple collections, 
+ Embedded and referenced data models, 
+ Advanced update/delete operators, 
+ Multi-stage aggregation pipelines, 
+ Compound indexes and query optimization, 
+ Authentication and authorization. 
+ 
+The frontend must be: 
+ provide basic interaction with the backend, 
+ allow users to create, view, update, and delete data. 
+ 
+Minimum pages: 
+ 1 student: at least 4 pages 
+ 2 students: at least 6 pages. 
+
+
+===== PAGE 2 =====
+Document Requirements must include detailed README and report: 
+ Cover page including name, group, topic, department. 
+ At least 10 pages 
+ Project Overview 
+ System architecture 
+ Database schema description 
+ MongoDB queries 
+ API documentation 
+ Indexing and optimization strategy 
+ Contribution of each student 
+ 
+Project Defense: 
+ Format: live demo, report, code 
+ Duration: 15-20 minutes per team 
+ Any team member will be asked questions about any part of the project. 
+ Absence or refusal to defend will be graded as 0 points. 
+ 
+Submission: 
+ Report 
+ GitHub link 
+ 
+Grading: 
+A. MongoDB Implementation – 50 points 
+Component Points Evaluation Focus 
+CRUD 
+Operations 
+8 Correct Create, Read, Update, 
+Delete operations 
+Data modeling 8 Proper use of embedded and 
+referenced documents 
+Advanced 
+update and 
+delete 
+8 $set, $push, $pull, $inc, 
+positional operators 
+Aggregation 
+framework 
+10 Multi-stage pipelines with real 
+business meaning 
+Indexes and 
+optimization 
+6 Compound index and 
+performance justification 
+ 
+B. Backend Logic and REST API – 30 points 
+Component Points Evaluation Focus 
+REST API 
+Design 
+6 Proper REST principles, 
+endpoint structure 
+Business Logic 6 Real use-case logic 
+Security 4 Authentication, authorization 
+Code quality 4 Readability, structure, 
+maintainability 
+ 
+C. Frontend – 10 points 
+Component Points Evaluation Focus 
+Functional 
+pages 
+10 Required number of pages 
+implemented 
+API integration 4 Real HTTP requests to 
+backend 
+Basic usability 2 Functional, non -broken UI , 
+layout, visual consistency 
+
+
+===== PAGE 3 =====
+ 
+ 
+D. Documentation – 10 points 
+Component Points Evaluation Focus 
+Database 
+documentation 
+4 Schemas, collections, 
+relations explained 
+API 
+documentation 
+2 Endpoints, request/response 
+examples 
+Architecture 
+explanation 
+3 Data flow and system 
+design 
+ 
+ 
+Additional architectural or engineering solutions may be rewarded with bonus points, provided the 
+core MongoDB and backend requirements are fully satisfied. The list below contains examples only 
+and is not exhaustive. 
+For example: 
+ Swagger / OpenAPI Specification 
+ ACID Transactions 
+ Proper Environment Configuration (.env usage) 
+ Centralized Error Handling 
+ Pagination, Filtering, Sorting Standards 
+ API Versioning 

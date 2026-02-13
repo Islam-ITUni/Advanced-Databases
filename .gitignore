@@ -1,0 +1,8 @@
+node_modules/
+.env
+_pdf_streams.txt
+_pdf_streams2.txt
+_pdf_strings.txt
+_pdf_titles_raw.txt
+_pdf_text.txt
+_from_word.txt

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop Manager - Orders</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-badge">CS</div>
+          <div>
+            <h1>Coffee Shop Manager</h1>
+            <p id="topbar-user">...</p>
+          </div>
+        </div>
+        <nav class="nav">
+          <a data-nav href="/dashboard.html">Dashboard</a>
+          <a data-nav href="/shops.html">Shops</a>
+          <a data-nav href="/orders.html">Orders</a>
+          <a data-nav href="/analytics.html">Analytics</a>
+          <a data-nav data-admin-only href="/users.html">Users</a>
+          <button id="logout-btn" class="btn danger">Logout</button>
+        </nav>
+      </header>
+
+      <section class="panel split">
+        <div>
+          <h2 class="panel-title">Create Order</h2>
+          <p class="panel-subtitle">Add new customer order before preparing items.</p>
+
+          <form id="create-order-form">
+            <label>Shop
+              <select id="create-order-shop" required></select>
+            </label>
+            <label>Customer Name
+              <input id="create-order-customer" required minlength="2" />
+            </label>
+            <div class="grid cols-2">
+              <label>Order Type
+                <select id="create-order-type">
+                  <option value="dine_in">dine_in</option>
+                  <option value="takeaway" selected>takeaway</option>
+                  <option value="delivery">delivery</option>
+                </select>
+              </label>
+              <label>Payment
+                <select id="create-order-payment">
+                  <option value="unpaid">unpaid</option>
+                  <option value="paid">paid</option>
+                  <option value="refunded">refunded</option>
+                </select>
+              </label>
+              <label>Table Number
+                <input id="create-order-table" placeholder="Optional" />
+              </label>
+              <label>Discount
+                <input id="create-order-discount" type="number" min="0" step="0.01" value="0" />
+              </label>
+              <label>Tax
+                <input id="create-order-tax" type="number" min="0" step="0.01" value="0" />
+              </label>
+            </div>
+            <button class="btn" type="submit">Create Order</button>
+            <button class="btn secondary" type="button" id="seed-demo-data">Load Demo Coffee Data</button>
+          </form>
+        </div>
+
+        <div>
+          <h2 class="panel-title">Order Filters</h2>
+          <label>Shop
+            <select id="order-filter-shop"></select>
+          </label>
+          <label>Status
+            <select id="order-filter-status">
+              <option value="">all</option>
+              <option value="pending">pending</option>
+              <option value="preparing">preparing</option>
+              <option value="served">served</option>
+              <option value="cancelled">cancelled</option>
+            </select>
+          </label>
+          <label>Payment
+            <select id="order-filter-payment">
+              <option value="">all</option>
+              <option value="unpaid">unpaid</option>
+              <option value="paid">paid</option>
+              <option value="refunded">refunded</option>
+            </select>
+          </label>
+          <button id="apply-order-filters" class="btn secondary">Apply Filters</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2 class="panel-title">Orders</h2>
+        <div id="orders-alert" class="alert hidden"></div>
+        <div id="orders-container" class="grid"></div>
+      </section>
+    </div>
+
+    <script type="module" src="/js/orders.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop Manager - Users</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-badge">CS</div>
+          <div>
+            <h1>Coffee Shop Manager</h1>
+            <p id="topbar-user">...</p>
+          </div>
+        </div>
+        <nav class="nav">
+          <a data-nav href="/dashboard.html">Dashboard</a>
+          <a data-nav href="/shops.html">Shops</a>
+          <a data-nav href="/orders.html">Orders</a>
+          <a data-nav href="/analytics.html">Analytics</a>
+          <a data-nav data-admin-only href="/users.html">Users</a>
+          <button id="logout-btn" class="btn danger">Logout</button>
+        </nav>
+      </header>
+
+      <section class="panel">
+        <h2 class="panel-title">User Management</h2>
+        <p class="panel-subtitle">Admin-only role controls.</p>
+        <div id="users-alert" class="alert hidden"></div>
+
+        <div class="table-wrap" id="users-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="users-body">
+              <tr><td colspan="4" class="muted">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="/js/users.js"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop Manager - Shops</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-badge">CS</div>
+          <div>
+            <h1>Coffee Shop Manager</h1>
+            <p id="topbar-user">...</p>
+          </div>
+        </div>
+        <nav class="nav">
+          <a data-nav href="/dashboard.html">Dashboard</a>
+          <a data-nav href="/shops.html">Shops</a>
+          <a data-nav href="/orders.html">Orders</a>
+          <a data-nav href="/analytics.html">Analytics</a>
+          <a data-nav data-admin-only href="/users.html">Users</a>
+          <button id="logout-btn" class="btn danger">Logout</button>
+        </nav>
+      </header>
+
+      <section class="panel split">
+        <div id="create-shop-panel">
+          <h2 class="panel-title">Create Coffee Shop</h2>
+          <p class="panel-subtitle">Add a new branch and initial configuration.</p>
+
+          <form id="create-shop-form">
+            <label>Name
+              <input id="create-name" required minlength="3" />
+            </label>
+            <label>Description
+              <textarea id="create-description" required minlength="10"></textarea>
+            </label>
+            <div class="grid cols-2">
+              <label>City
+                <input id="create-city" required />
+              </label>
+              <label>Address
+                <input id="create-address" required />
+              </label>
+              <label>Status
+                <select id="create-status">
+                  <option value="open">open</option>
+                  <option value="closed">closed</option>
+                  <option value="maintenance">maintenance</option>
+                </select>
+              </label>
+              <label>Menu Categories
+                <input id="create-menu" placeholder="espresso, tea, desserts" />
+              </label>
+            </div>
+            <label>Tags
+              <input id="create-tags" placeholder="downtown, flagship" />
+            </label>
+            <button class="btn" type="submit">Create Shop</button>
+          </form>
+        </div>
+
+        <div>
+          <h2 class="panel-title">Filter</h2>
+          <p class="panel-subtitle">Search and narrow visible shops.</p>
+
+          <label>Status
+            <select id="filter-status">
+              <option value="">all</option>
+              <option value="open">open</option>
+              <option value="closed">closed</option>
+              <option value="maintenance">maintenance</option>
+            </select>
+          </label>
+          <label>Search
+            <input id="filter-search" placeholder="name or city" />
+          </label>
+          <label id="filter-include-archived-wrap" class="hidden">
+            <input id="filter-include-archived" type="checkbox" />
+            Include archived shops
+          </label>
+          <button id="apply-filters" class="btn secondary">Apply Filters</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2 class="panel-title">Shops</h2>
+        <div id="shops-alert" class="alert hidden"></div>
+        <div id="shops-container" class="grid"></div>
+      </section>
+    </div>
+
+    <script type="module" src="/js/shops.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop Manager - Analytics</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-badge">CS</div>
+          <div>
+            <h1>Coffee Shop Manager</h1>
+            <p id="topbar-user">...</p>
+          </div>
+        </div>
+        <nav class="nav">
+          <a data-nav href="/dashboard.html">Dashboard</a>
+          <a data-nav href="/shops.html">Shops</a>
+          <a data-nav href="/orders.html">Orders</a>
+          <a data-nav href="/analytics.html">Analytics</a>
+          <a data-nav data-admin-only href="/users.html">Users</a>
+          <button id="logout-btn" class="btn danger">Logout</button>
+        </nav>
+      </header>
+
+      <section class="panel">
+        <h2 class="panel-title">Sales Analytics</h2>
+        <p class="panel-subtitle">Track operational and revenue performance by shop.</p>
+        <div id="analytics-alert" class="alert hidden"></div>
+
+        <div class="actions" style="margin-top:0.8rem;">
+          <select id="analytics-shop-select" style="min-width:280px;"></select>
+          <button id="reload-summary" class="btn">Reload Shop Summary</button>
+          <button id="reload-staff" class="btn secondary">Reload Staff Performance</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3 class="panel-title">Shop Summary</h3>
+        <div id="summary-content"></div>
+      </section>
+
+      <section class="panel">
+        <h3 class="panel-title">Staff Performance</h3>
+        <div id="staff-content"></div>
+      </section>
+    </div>
+
+    <script type="module" src="/js/analytics.js"></script>
+  </body>
+</html>
