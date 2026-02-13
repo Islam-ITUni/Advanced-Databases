@@ -182,12 +182,4 @@ npm run dev
 - `npm run check`: syntax/health checks
 - `npm run report`: generate `Final_Report_CoffeeShop.docx`
 
-## 12. Report
 
-Generated report file:
-
-- `Final_Report_CoffeeShop.docx`
-
-Generator source:
-
-- `scripts/generate-report.js`
